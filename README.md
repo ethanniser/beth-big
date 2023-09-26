@@ -2,7 +2,7 @@
 ## To open an issue: https://github.com/ethanniser/the-beth-stack
 ## To discuss: https://discord.gg/Z3yUtMfkwa
 
-### To run:
+### To run locally:
 
 1. `bun install`
 2. create a new turso database with `turso db create <name>`
@@ -14,3 +14,12 @@
 8. `bun db:push`
 9. `bun dev`
 
+### To deploy to fly.io
+
+1. Install the [Fly CLI](https://fly.io/docs/hands-on/install-flyctl/)
+
+2. Run `fly launch`
+
+3. Run `fly secrets set <NAME>=<VALUE>` (probably want to set `NODE_ENV` to `"production"`)
+
+5. Run `fly deploy`
